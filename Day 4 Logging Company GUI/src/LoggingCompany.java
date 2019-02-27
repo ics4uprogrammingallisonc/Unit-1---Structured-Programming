@@ -13,10 +13,10 @@ import org.eclipse.swt.widgets.Label;
 import javax.swing.JOptionPane;
 import org.eclipse.swt.SWT;
 import org.eclipse.swt.widgets.Text;
-import org.eclipse.wb.swt.SWTResourceManager;
 import org.eclipse.swt.widgets.Button;
 import org.eclipse.swt.events.SelectionAdapter;
 import org.eclipse.swt.events.SelectionEvent;
+import org.eclipse.wb.swt.SWTResourceManager;
 
 public class LoggingCompany {
 
@@ -74,16 +74,17 @@ public class LoggingCompany {
 		lblAnswer.setBounds(59, 163, 312, 21);
 		
 		lblNumbers = new Label(shlLoggingComp, SWT.NONE);
-		lblNumbers.setText("0.25, 0.50 or 1 meter");
 		lblNumbers.setFont(SWTResourceManager.getFont("Segoe UI", 12, SWT.NORMAL));
+		lblNumbers.setText("0.25, 0.50 or 1 meter");
 		lblNumbers.setBounds(138, 37, 153, 21);
 		
 		lblLogLength = new Label(shlLoggingComp, SWT.NONE);
-		lblLogLength.setText("Log lengths:");
 		lblLogLength.setFont(SWTResourceManager.getFont("Segoe UI", 12, SWT.NORMAL));
+		lblLogLength.setText("Log lengths:");
 		lblLogLength.setBounds(158, 10, 110, 21);
 		
 		Button btnEnter = new Button(shlLoggingComp, SWT.NONE);
+		btnEnter.setFont(SWTResourceManager.getFont("Segoe UI", 12, SWT.NORMAL));
 		btnEnter.addSelectionListener(new SelectionAdapter() {
 			@Override
 			//when the button is clicked
@@ -129,7 +130,6 @@ public class LoggingCompany {
 				
 			}
 		});
-		btnEnter.setFont(SWTResourceManager.getFont("Segoe UI", 11, SWT.NORMAL));
 		btnEnter.setBounds(172, 115, 75, 25);
 		btnEnter.setText("Enter");
 		
