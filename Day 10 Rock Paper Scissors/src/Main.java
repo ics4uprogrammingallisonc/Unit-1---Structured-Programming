@@ -65,6 +65,7 @@ public class Main {
 	 */
 	private void initialize() {
 		frmGame = new JFrame();
+		frmGame.setTitle("Rock, Paper, Scissors");
 		frmGame.setBounds(100, 100, 492, 491);
 		frmGame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		frmGame.getContentPane().setLayout(null);
@@ -227,7 +228,7 @@ public class Main {
 					lblOutcome.setText("It's a tie!");
 					
 				}
-				else if (userChoice < compChoice) {
+				else if (userChoice == ROCK && compChoice == PAPER) {
 					//set to lost
 					lblOutcome.setText("You lost.");
 					
@@ -237,7 +238,47 @@ public class Main {
 					//display times won
 					lblNumLost.setText(" " + numLost);
 				}
-				else if (userChoice > compChoice) {
+				else if (userChoice == ROCK && compChoice == SCISSORS) {
+					//set to win
+					lblOutcome.setText("You won!!");
+					
+					//add to win counter
+					numWon = numWon + 1;
+					
+					//display times won
+					lblNumWon.setText(" " + numWon);
+				}
+				else if (userChoice == PAPER && compChoice == SCISSORS) {
+					//set to lost
+					lblOutcome.setText("You lost.");
+					
+					//add to lost counter
+					numLost = numLost + 1;
+					
+					//display times won
+					lblNumLost.setText(" " + numLost);
+				}
+				else if (userChoice == PAPER && compChoice == ROCK) {
+					//set to win
+					lblOutcome.setText("You won!!");
+					
+					//add to win counter
+					numWon = numWon + 1;
+					
+					//display times won
+					lblNumWon.setText(" " + numWon);
+				}
+				else if (userChoice == SCISSORS && compChoice == ROCK) {
+					//set to lost
+					lblOutcome.setText("You lost.");
+					
+					//add to lost counter
+					numLost = numLost + 1;
+					
+					//display times won
+					lblNumLost.setText(" " + numLost);
+				}
+				else if (userChoice == SCISSORS && compChoice == PAPER) {
 					//set to win
 					lblOutcome.setText("You won!!");
 					
