@@ -127,7 +127,7 @@ public class Main {
 				studentInfo.middleInitial = txtMiddle.getText();
 				
 				//get grade
-				studentInfo.grade = comboBox.getSelectedIndex();
+				studentInfo.grade = Integer.parseInt((String) comboBox.getSelectedItem());
 				
 				//get identification
 				boolean indentified = chckbxIdentified.isSelected();
@@ -135,8 +135,16 @@ public class Main {
 				//check if it is identified or not 
 				if(indentified == true) {
 					//set the studentInfo
+					studentInfo.identified = "identified";
 					
 				}
+				else {
+					//set to not identified
+					studentInfo.identified = "not identified";
+				}
+				
+				//call the function
+				studentInfo.Display();
 					
 			}
 		});
